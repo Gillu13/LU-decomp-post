@@ -1,8 +1,6 @@
 #include <Eigen/Dense>
 #include <iostream>
-#include <cmath>
 #include <chrono>
-#include <time.h>
 
 typedef Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> MatrixXd;
 typedef Eigen::VectorXd VectXd;
@@ -19,7 +17,10 @@ void fill_dense(int N, MatrixXd & rM, VectXd & rf){
 
 int main(){
     srand(time(NULL));
-    int M=710;
+    int M;
+    std::cout << "Enter M: "; 
+    std::cin >> M;
+    std::cout << "Matrix size M: " << M << std::endl;
     auto tbegin = std::chrono::high_resolution_clock::now();
     VectXd x(M), f(M);
     MatrixXd A(M,M);

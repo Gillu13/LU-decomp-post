@@ -1,8 +1,5 @@
 #include <iostream>
-#include <cmath>
 #include <chrono>
-#include <time.h>
-
 
 template <size_t N>
 void lu_factorization(double (&rL)[N][N], double (&rU)[N][N]){
@@ -87,7 +84,8 @@ void fill_sparse(double (&rL)[N][N], double (&rU)[N][N], double (&rb)[N]){
 
 int main(){
     srand(time(NULL));
-    const int M=710;
+    const int M=400;
+    std::cout << "Matrix size M: " << M << std::endl;
     auto tbegin = std::chrono::high_resolution_clock::now();
     double L[M][M], U[M][M], b[M];
     

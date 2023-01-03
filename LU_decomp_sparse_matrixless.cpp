@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 #include <chrono>
 
 
@@ -26,8 +25,8 @@ void backward(int N, double * pc, double * pf){
 }
 
 int main(){
-    
-    int M=710;
+    int M=1500;
+    std::cout << "Matrix size M: " << M << std::endl;
     srand(time(NULL));
     
     auto tbegin = std::chrono::high_resolution_clock::now();

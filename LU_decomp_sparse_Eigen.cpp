@@ -1,8 +1,6 @@
 #include <Eigen/Sparse>
 #include <iostream>
-#include <cmath>
 #include <chrono>
-#include <time.h>
 
 typedef Eigen::SparseMatrix<double> SpMat;
 typedef Eigen::VectorXd VectXd;
@@ -25,7 +23,9 @@ void fill_sparse(int N, SpMat & rM, VectXd & rf){
 
 int main(){
     srand(time(NULL));
-    int M=710;
+    int M;
+    std::cout << "Enter M: ";
+    std::cin >> M;
     auto tbegin = std::chrono::high_resolution_clock::now();
 
     SpMat A(M,M);
